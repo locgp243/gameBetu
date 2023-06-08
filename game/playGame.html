@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="css/fontawesome.pro.6.0.0.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <main>
+            <a class="index" href="../index.html"><img src="./img/img-icon/index.png" alt=""></a>
+            <div class="refresh"><img src="./img/img-icon/refest.png" alt=""></div>
+            <marquee>Game phát triển bởi nhóm : GS25 2.0</marquee>
+            <section id="wrapper">
+                <div class="img-npc" data-aos="fade-down-right">
+                    <img src="../assets/img/avatar-1.png" alt="">
+                </div>
+                <div class="contents"  data-aos="fade-left">
+                    <div >
+                        <h1 class="hello-name"> </h1>
+                    </div>
+                    <p class="content-hello">
+                        
+                    </p>
+                    <button id="close-btn-contents">Đóng</button>
+                </div>
+                <div class="event-months">
+                    <div class="navbar">
+                        <h3>Event</h3>
+                        <i class="fa-solid fa-xmark on-toggle1"></i>
+                    </div>
+                    <h2 id="question-event-month" class="question text"></h2>
+                    <div
+                        id="answer-button-event-months"
+                        class="option-buttons"
+                    ></div>
+                    <button id="close-btn-event">Đóng</button>
+                </div>
+                <div class="event-sports">
+                    <div class="navbar">
+                        <h3>Thể Thao</h3>
+                        <i class="fa-solid fa-xmark on-toggle4"></i>
+                    </div>
+                    <h2 class="question-sprots">
+                        hãy lựa chọn 1 môn thể thao mà bạn muốn tham gia?
+                    </h2>
+                    <div class="list-sports">
+                        <!-- <button class="sports-items-btn">
+                    <div class="img-sprots">
+                        <img src="../assets/img/gym.jpg" />
+                    </div>
+                    <p>Tập gym</p>
+                    <div class="coins-sports gym">-200k</div>
+                </button>
+                <button class="sports-items-btn">
+                    <div class="img-sprots">
+                        <img src="../assets/img/gym.jpg" />
+                    </div>
+                    <p>Bóng đá</p>
+                    <div class="coins-sports football">-100k</div>
+                </button>
+                <button class="sports-items-btn">
+                    <div class="img-sprots">
+                        <img src="../assets/img/gym.jpg" />
+                    </div>
+                    <p>Chạy bộ</p>
+                    <div class="coins-sports walk">Free</div>
+                </button>
+    
+            </div>-->
+                    </div>
+                    <button id="close-sports-btn">Đóng</button>
+                </div>
+                <div class="event-volunteer">
+                    <div class="navbar">
+                        <h3>Làm tình, Nguyện</h3>
+                        <i class="fa-solid fa-xmark on-toggle-volunteer"></i>
+                    </div>
+                    <h2>Bạn hãy chọn hoạt động tham gia làm tình nguyện</h2>
+                    <div class="list-volunteer"></div>
+                    <button id="close-volunteer-btn">Đóng</button>
+                </div>
+                <div class="event-work">
+                    <div class="navbar">
+                        <h3>Làm thêm</h3>
+                        <i class="fa-solid fa-xmark on-toggle-work"></i>
+                    </div>
+                    <h2>Bạn hãy chọn hoạt động tham gia làm tình</h2>
+                    <div class="list-work"></div>
+                    <button id="close-work-btn">Đóng</button>
+                </div>
+
+                <div class="event-relationship">
+                    <div class="navbar">
+                        <h3>Mối Quan Hệ</h3>
+                        <i class="fa-solid fa-xmark on-toggle-relationship"></i>
+                    </div>
+                    <div class="list-relationship"></div>
+                    <button id="close-relationship-btn">Đóng</button>
+                </div>
+                <div class="event-relationship-donate">
+                    <div class="navbar">
+                        <h3>Các NPC</h3>
+                    </div>
+                    <div class="list-relationship-donate"></div>
+                </div>
+
+                <div class="relationship-contact">
+                    <div class="navbar">
+                        <h3>Tương Tác</h3>
+                        <i class="fa-solid fa-xmark on-toggle-contact"></i>
+                    </div>
+                    <div class="list-contact">
+                        <button class="contact-item" id="1">Chat</button>
+                        <button class="contact-item" id="2">Hẹn hò</button>
+                        <button class="contact-item" id="3">Tặng Quà</button>
+                        <button class="contact-item" id="4">Cướp</button>
+                    </div>
+                    <button id="close-contact-btn">Đóng</button>
+                </div>
+
+                <div class="event-bag">
+                    <div class="navbar">
+                        <h3>Balo</h3>
+                        <i class="fa-solid fa-xmark on-toggle-bag"></i>
+                    </div>
+                    <div class="list-bag"></div>
+                </div>
+
+                <div class="event-review">
+                    <div class="navbar">
+                        <h3>Bạn đã xem xong hướng dẫn</h3>
+                        
+                    </div>
+                    <button class="continue">Tiếp tục</button>
+                </div>
+                <!-- <div class="skip">
+                    <button id="skip">Skip..</button>
+                </div> -->
+                <div class="skip">
+                    <button id="skip">Skip..</button>
+                    <div
+                        class="loader loader1"
+                    ></div>
+                    <div
+                        class="loader loader2"
+                    ></div>
+                    <div
+                        class="loader loader3"
+                    ></div>
+                    <div
+                        class="loader loader4"
+                    ></div>
+                </div>
+
+                <div class="event-relax">
+                    <div class="navbar">
+                        <h3>Giải Trí</h3>
+                        <i class="fa-solid fa-xmark on-toggle-relax"></i>
+                    </div>
+                    <h2>Bạn hãy chọn hoạt động giải trí</h2>
+                    <div class="list-relax"></div>
+                    <button id="close-relax-btn">Đóng</button>
+                </div>
+
+                <div class="wrapper-game">
+                    <div class="avt-main">
+                        <img src="../assets/img/img-game/gaming/main.png" />
+                    </div>
+                    <div class="avt-demon">
+                         <img src="../assets/img/img-game/gaming/quai.png" />
+                    </div>
+                    <div class="avt-price">
+                        <img src="../assets/img/img-game/gaming/cong-chua-1.png" />
+                    </div>
+                    <div class="main-die">
+                        <img src="../assets/img/img-game/gaming/main-die.png" />
+                    </div>
+                    <div class="main-win">
+                        <img src="../assets/img/img-game/gaming/end-game.png" />
+                    </div>
+                    <div class="navbar">
+                        <h3>Game</h3>
+                        <i class="fa-solid fa-xmark on-toggle-game"></i>
+                    </div>
+                   
+                    <div class="list-game">
+                        <div class="board hidden"></div>
+                        <div class="container game-fighter-demon hidden">
+                            <!-- <h1>Game Anh Hùng Chiến Ma Vương</h1>
+                            <h2>Bạn sẳn sàng để cứu Eimi?</h2> -->
+                            <h2 class="end-mess"></h2>
+                            <div id="question-container" class="hidden">
+                                <p>Thời gian: <div id="time-left"></div></p>
+                                <p class="question-game"></p>
+
+                                <div class="answer-buttons">
+                                    <button id="#button-game" class="btn">Option 1</button>
+                                    <button id="#button-game" class="btn">Option 2</button>
+                                    <button id="#button-game" class="btn">Option 3</button>
+                                    <button id="#button-game" class="btn">Option 4</button>
+                                </div>
+                            </div>
+                            <div id="controls-container">
+                                <div id="ma-vuong-hp">
+                                    <h3>Máu Ma Vương:</h3>
+                                    <p id="ma-vuong-hp-value"></p>
+                                </div>
+                                <div id="main-hp">
+                                    <h3>Máu Anh Hùng:</h3>
+                                    <p id="main-hp-value"></p>
+                                </div>
+                                <button id="start-btn" class="btn">Bắt đầu</button>
+                                <button id="answer-btn" class="btn hidden">ANSWER</button>
+                                <button id="next-btn" class="btn hidden">NEXT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="close-game-btn">Đóng</button>
+                </div>
+
+                <div class="end-game-wrapper">
+                    <div class="navbar">
+                        <h3>End Game</h3>
+                        <i class="fa-solid fa-xmark on-toggle-endgame"></i>
+                    </div>
+
+                    <div class="list-content-endgame">
+                        <h2>Nhìn Lại Quá Khứ</h2>
+                    </div>
+
+                    <!-- <button id="close-endgame-btn show-btn">Đóng</button> -->
+                </div>
+
+                <div class="left">
+                    <div class="hiiden">
+                        <div class="event-contents">
+                            <div class="event-content-title"></div>
+                        </div>
+                        <!-- <div class="event-months">
+            <h2 id="question-event-month" class="question"></h2>
+            <div id="answer-button-event-months"></div>
+            <button id="close-btn-event">Đóng</button>
+        </div> -->
+                    </div>
+                </div>
+
+                <div class="right">
+                    
+                    <div class="ground_btn-active">
+                        <div class="btn-active">
+                            <button
+                                class="study-btn codepro-custom-btn codepro-btn-3"
+                            >
+                                <span> Học Hành</span>
+                                <div class="box-review box-study">
+                                    Học Hành, trả lời đúng câu hỏi bạn sẽ nhận được điểm trí tuệ.
+                                    <img class="next-study next" src="./img/img-icon/next.png" alt="">
+                                </div>
+                            </button>
+                            <button
+                                class="sports-btn codepro-custom-btn codepro-btn-3"
+                            >
+                                <span> Thể Thao</span>
+                                <div class="box-review box-sports">
+                                    Thể Thao, tập thể thao giúp tăng điểm sức khỏe.
+                                    <img class="back-sports back" src="./img/img-icon/back.png" alt="">
+                                    <img class="next-sports next" src="./img/img-icon/next.png" alt="">
+                                </div>
+                            </button>
+                            <button
+                                class="work-btn codepro-custom-btn codepro-btn-3"
+                            >
+                                <span> Làm Thêm</span>
+                                <div class="box-review box-work">
+                                    Làm thêm sẽ tăng tiền, tùy vào mức độ làm thêm mà nhận được tiền và trừ điểm sức khỏe cùng hạnh phúc tương ứng
+                                    <img class="back-work back" src="./img/img-icon/back.png" alt="">
+                                    <img class="next-work next" src="./img/img-icon/next.png" alt="">
+                                </div>
+                            </button>
+                            <button
+                                class="relax-btn codepro-custom-btn codepro-btn-3"
+                            >
+                                <span> Giải Trí</span>
+                                <div class="box-relax box-review">
+                                    Giải Trí, chơi các trò chơi để tăng điểm hạnh phúc.
+                                    <img class="back-relax back" src="./img/img-icon/back.png" alt="">
+                                    <img class="next-relax next" src="./img/img-icon/next.png" alt="">
+                                </div>
+                            </button>
+                            <button
+                                class="volunteer-btn codepro-custom-btn codepro-btn-3"
+                            >
+                                <span> Làm Tình Nguyện</span>
+                                <div class="box-volunteer box-review">
+                                    Làm Tình Nguyện, tham gia các hoạt động làm điều tốt giúp tăng điểm đạo đức.
+                                    <img class="back-volunteer back" src="./img/img-icon/back.png" alt="">
+                                    <img class="next-volunteer next" src="./img/img-icon/next.png" alt="">
+                                </div>
+                            </button>
+                            <div id="toast"></div>
+                            <div class="shops">
+                                <button
+                                    class="shop codepro-custom-btn codepro-btn-3"
+                                >
+                                    <span> SHOP</span>
+                                    <div class="box-review box-shop-btn">
+                                        Bạn có thể mua sắm các vật phẩm ở đây, các vật phẩm có thể tăng điểm thông số và hảo cảm với NPC
+                                        <img class="back-shop back" src="./img/img-icon/back.png" alt="">
+                                    <img class="next-shop next" src="./img/img-icon/next.png" alt="">
+                                    </div>
+                                </button>
+                                <div class="box-shopp">
+                                    <div class="navbar">
+                                        <h1>Shop</h1>
+                                        <i
+                                            class="fa-solid fa-xmark on-toggle3"
+                                        ></i>
+                                    </div>
+                                    <div class="box-shop">
+                                        <!-- <div class="shop-item">
+            <img class="shop-item-img" src="https://nhadepso.com/wp-content/uploads/2023/03/101-hinh-nen-sach-dep-an-tuong-cho-may-tinh-hoac-dien-thoai_20.jpg">
+            <div class="shop-item-text">Thuốc lá Thuốc lá Thuốc lá Thuốc lá</div>
+            <div class="shop-item-mony">Giá:  K</div>
+            <button class="shop-buy">mua</button>
+        </div> -->
+                                        <!-- <div class="shop-item" id="shop-item2">
+            <div class="shop-coint" id="coint-item2"></div>
+            <button class="shop-buy">mua</button>
+        </div>
+        <div class="shop-item" id="shop-item3">
+            <div class="shop-coint" id="coint-item3"></div>
+            <button class="shop-buy">mua</button>
+        </div>
+        <div class="shop-item" id="shop-item4">
+            <div class="shop-coint" id="coint-item4"></div>
+            <button class="shop-buy">mua</button>
+        </div>
+        <div class="shop-item" id="shop-item5">
+            <div class="shop-coint" id="coint-item5"></div>
+            <button class="shop-buy">mua</button>
+        </div> -->
+                                    </div>
+                                </div>
+                                <!-- số may mắn -->
+                                <div class="box-shop-item"></div>
+                            </div>
+
+                            <button
+                                class="relationship codepro-custom-btn codepro-btn-3"
+                            >
+                                <span> Mối Quan Hệ</span>
+                                <div class="box-review box-relationship">
+                                    Hiển thị các mối quan hệ bạn đang có, có thể tương các với các mối quan hệ, khi điểm thân mật đạt đến 1 mức độ thì ta có thể thiết lập mối quan hệ hẹn hò với NPC đó
+                                    <img class="back-relationship back" src="./img/img-icon/back.png" alt="">
+                                    <img class="next-relationship next" src="./img/img-icon/next.png" alt="">
+                                </div>
+                            </button>
+
+                            <button class="bag button">
+                                <i class="fa-duotone fa-backpack"></i>
+                                <div class="box-review box-bag">
+                                    Túi vật phẩm, đựng các vật phẩm mà mua được
+                                    <img class="back-bag back" src="./img/img-icon/back.png" alt="">
+                                    <img class="next-bag next" src="./img/img-icon/next.png" alt="">
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="btn-month">
+                            <div class="month"></div>
+                            <button
+                                class="increase-month "
+                            >
+                                <span> Tăng Tháng</span>
+                                <div class="box-review box-month">
+                                    Mỗi tháng sẽ có một event ngẫu nhiên hoặc không, mỗi event cốt truyện sẽ rẽ nhánh sang nhiều hướng, đúng hướng bạn sẽ mở khóa các mối quan hệ mới hoặc tăng điểm thông số lên.
+                                    <img class="back-month back" src="./img/img-icon/back.png" alt="">
+                                    <img class="next-month next" src="./img/img-icon/next.png" alt="">
+                                </div>
+                            </button>
+                        </div>
+                    
+                    <div class="avatars show-btn">
+                        <div class="navbar">
+                            <h3>Nhân Vật</h3>
+                            <!-- <i class="fa-solid fa-xmark on-toggle-avatar"></i> -->
+                        </div>
+                        <h1>Chọn nhân vật</h1>
+
+                        <form id="forms">
+                            <div id="input-name"
+                            class="character-name" 
+                                for="character-name"
+                                style="
+                                    display: flex;
+                                    align-items: flex-end;
+                                    justify-content: space-around;
+                                "
+                            >
+                                <h2>Tên nhân vật:</h2>
+                                <input
+                                    type="text"
+                                    id="character-name"
+                                    required
+                                    placeholder="Hãy nhập tên của bạn:"
+                                />
+                            </div>
+                            <div class="list-avatar"></div>
+                            <!-- <label for="character-image1">
+                <input
+                    type="radio"
+                    id="character-image1"
+                    name="character-image"
+                    value="image1.jpg"
+                    required
+                />
+                <img
+                    src="img/z3776143616302_687605af9ae2b47306c88a6faf369d27.jpg"
+                    alt="Nhân vật 1"
+                    class="character-image"
+                />
+            </label>
+
+            <label for="character-image2">
+                <input
+                    type="radio"
+                    id="character-image2"
+                    name="character-image"
+                    value="image2.jpg"
+                    required
+                />
+                <img
+                    src="img/nữ.jpg"
+                    alt="Nhân vật 2"
+                    class="character-image"
+                />
+            </label>
+
+            <label for="character-image3">
+                <input
+                    type="radio"
+                    id="character-image3"
+                    name="character-image"
+                    value="image3.jpg"
+                    required
+                />
+                <img
+                    src="img/huy-removebg-preview.png"
+                    alt="Nhân vật 3"
+                    class="character-image"
+                />
+            </label> -->
+
+                     
+                            <input id="oke" type="submit" value="Xác nhận" />
+                        </form>
+
+                        <!-- <button id="close-avatar-btn"></button> -->
+                    </div>
+                    </div>
+                    <div class="shop-avatars">
+                        <div class="navbar">
+                            <h3>Nhân Vật</h3>
+                             <i class="fa-solid fa-xmark on-toggle-avatar"></i>
+                        </div>
+                        <h1  style="margin-top: 5rem;">Chọn nhân vật</h1>
+
+                        <form id="formss">
+                            <div class="shop-list-avatar"></div>
+                            <!-- <label for="character-image1">
+                <input
+                    type="radio"
+                    id="character-image1"
+                    name="character-image"
+                    value="image1.jpg"
+                    required
+                />
+                <img
+                    src="img/z3776143616302_687605af9ae2b47306c88a6faf369d27.jpg"
+                    alt="Nhân vật 1"
+                    class="character-image"
+                />
+            </label>
+
+            <label for="character-image2">
+                <input
+                    type="radio"
+                    id="character-image2"
+                    name="character-image"
+                    value="image2.jpg"
+                    required
+                />
+                <img
+                    src="img/nữ.jpg"
+                    alt="Nhân vật 2"
+                    class="character-image"
+                />
+            </label>
+
+            <label for="character-image3">
+                <input
+                    type="radio"
+                    id="character-image3"
+                    name="character-image"
+                    value="image3.jpg"
+                    required
+                />
+                <img
+                    src="img/huy-removebg-preview.png"
+                    alt="Nhân vật 3"
+                    class="character-image"
+                />
+            </label> -->
+
+                            <br /><br />
+                            <input id="oke" type="submit" value="Xác nhận" />
+                        </form>
+
+                        <!-- <button id="close-avatar-btn"></button> -->
+                    </div>
+                    <div class="figure">
+                        <div class="figure-gif" >
+                            <h2>Nhân Vật</h2>
+                            <div class="box-figure">
+                                <div class="avatar">
+                                    <button class="avatar-btn-on">
+                                        Nhân vật
+                                    </button>
+                                    <div class="avatar-img"></div>
+                                </div>
+                                <div class="box-poin">
+                                    <div id="box-name" class="box-name">
+                                        Tên nhân vật:
+                                    </div>
+                                    
+                                    <div style="display: flex">
+                                        Điểm Hành Động:
+                                        <div
+                                            class="point-active"
+                                            style="margin-left: 1rem"
+                                        ></div>
+                                    </div>
+                                    <div class="name-parameter">
+                                    <p>Tiền:</p>
+                                    <span class="money"></span><br />
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="figure-parameter">
+                            <!--Thông số-->
+                            <h2>Thông Số Nhân Vật</h2>
+                            <div class="title">
+                                <div class="name-parameter">
+                                    <p>Trí Tuệ:</p>
+                                    <div class="box-bar">
+                                        <div class="box-poin">
+                                            <img src="/game/img/img-icon/box.png" alt="">
+                                        </div>
+                                        <div class="progress">
+                                            <div
+                                                class="progress-bar tritue"
+                                                role="progressbar"
+                                                aria-label="Example with label"
+                                                aria-valuenow="25"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                            >
+                                                <span class="int-point"></span
+                                                ><br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="name-parameter">
+                                    <p>Sức Khỏe:</p>
+                                    <div class="box-bar">
+                                        <div class="box-poin">
+                                            <img src="/game/img/img-icon/box.png" alt="">
+                                        </div>
+                                        <div class="progress">
+                                            <div
+                                                class="progress-bar health"
+                                                role="progressbar"
+                                                aria-label="Example with label"
+                                                aria-valuenow="25"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                            >
+                                                <span
+                                                    class="health-point"
+                                                ></span
+                                                ><br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="name-parameter">
+                                    <p>Hạnh Phúc:</p>
+                                    <div class="box-bar">
+                                        <div class="box-poin">
+                                            <img src="/game/img/img-icon/box.png" alt="">
+                                        </div>
+                                        <div class="progress">
+                                            <div
+                                                class="progress-bar happy"
+                                                role="progressbar"
+                                                aria-label="Example with label"
+                                                aria-valuenow="25"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                            >
+                                                <span class="happy-point"></span
+                                                ><br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="name-parameter">
+                                    <p>Đạo Đức:</p>
+                                    <div class="box-bar">
+                                        <div class="box-poin">
+                                            <img src="/game/img/img-icon/box.png" alt="">
+                                        </div>
+                                        <div class="progress">
+                                            <div
+                                                class="progress-bar daoduc"
+                                                role="progressbar"
+                                                aria-label="Example with label"
+                                                aria-valuenow="25"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                            >
+                                                <span
+                                                    class="morality-point"
+                                                ></span
+                                                ><br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- <div class="img-logo">
+                                <img src="../assets/img/logo.png" alt="">
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="quiz">
+                <div class="navbar">
+                    <h3>Học Hành</h3>
+                    <i class="fa-solid fa-xmark on-toggle2"></i>
+                </div>
+                <h2 id="question">Câu hỏi ở đây</h2>
+                <div id="answer-buttons">
+                    <!-- <button class="btn">Answer 1</button>
+                  <button class="btn">Answer 2</button>
+                  <button class="btn">Answer 3</button>
+                  <button class="btn">Answer 4</button> -->
+                </div>
+                <button id="close-btn">Đóng</button>
+            </div>
+            <div id="load"></div>
+        </main>
+
+        <div class="hidden">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/pw2YZCnUnJ8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/pw2YZCnUnJ8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </div>
+
+        <!-- <audio
+            class="ms"
+            src="./img/sports/volleyball.mp3"
+            autoplay
+            type="audio/mpeg"
+        ></audio> -->
+        <section class="script">
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="./js/main.js"></script>
+            <script>
+                AOS.init();
+            </script>
+        </section>
+    </body>
+</html>

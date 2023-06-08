@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/img/loadGame/bgg.webp");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.game-text{
+    width: 55%;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translateX(-50%);
+    object-fit: cover;
+}
+
+.game-text-1{
+    width: 20%;
+    position: absolute;
+    bottom: 32%;
+    left: 19%;
+
+    object-fit: cover;
+}
+
+.game-img{
+    position: absolute;
+    bottom: 10%;
+    right: 23%;
+    top: 0;
+}
+
+.game-img-2{
+    position: absolute;
+    bottom: 0%;
+    right: 9%;
+}
+.game-img-3{
+    position: absolute;
+    bottom: 0%;
+    right: 20%;
+}
+
+
+.buttons{
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button{
+    padding: 10px 20px;
+    margin-bottom: 8px;
+}

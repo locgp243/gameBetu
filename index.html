@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="./assets/css/fontawesome.pro.6.0.0.css" rel="stylesheet" />
+        <link href="./assets/css/style.css" rel="stylesheet" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap");
+        </style>
+    </head>
+    <body>
+        <!-- Wrapper Open -->
+        <section id="wrapper">
+            <div id="toast"></div>
+            <section class="form-login active-btn">
+                <div class="close">
+                    <i class="fa-solid fa-xmark close-login"></i>
+                </div>
+                <div class="form-box login">
+                    <h2>Đăng Nhập</h2>
+                    <form id="loginForm" action="#" method="post">
+                        <div class="input-box">
+                            <span class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <input id="username" type="text" required />
+                            <label>User</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input id="password" type="password" required />
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label
+                                ><input
+                                    type="checkbox"
+                                    name="name"
+                                    value=""
+                                />Lưu mật khẩu</label
+                            >
+                            <a href="#">Quên mật khẩu?</a>
+                            <input
+                                id="dangNhap"
+                                class="btn"
+                                type="submit"
+                                name="name"
+                                value="Đăng Nhập"
+                            />
+                            <div class="register">
+                                <label>Bạn chưa có tài khoản?</label>
+                                <a class="register-link" href="#">Đăng Kí</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="form-login from-signUp active-btn">
+                <div class="close">
+                    <i class="fa-solid fa-xmark close-signUp"></i>
+                </div>
+                <div class="form-box signUp">
+                    <h2>Đăng Ký</h2>
+                    <form id="signUpForm" action="#" method="post">
+                        <div class="input-box">
+                            <span class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <input id="usernamee" type="text" required />
+                            <label>User</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input id="passwordd" type="password" required />
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <input
+                                id="signUp"
+                                class="btn"
+                                type="submit"
+                                name="name"
+                                value="Đăng Ký"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <header>
+                <nav
+                    class="navbar navbar-expand-lg bg-body-tertiary header-menu"
+                >
+                    <div class="container-fluid">
+                        <a
+                            class="navbar-brand"
+                            target="_blank"
+                            href="https://xettuyen.ktkt.edu.vn/"
+                        >
+                            <img src="./assets/img/./logo.png" alt="" />
+                        </a>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link active"
+                                        aria-current="page"
+                                        href="#main"
+                                        >Trang Chủ</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#introduction"
+                                        >Giới Thiệu</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#character"
+                                        >Nhân Vật</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#guide"
+                                        >Tư Liệu</a
+                                    >
+                                </li>
+                                <li class="nav-item" id="login-btn">
+                                    <a class="nav-link login-btn" href="#"
+                                        >Login</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <section id="main">
+                <div class="main-title-game">
+                    <h2 class="game-title">Experiencing College Life</h2>
+                    <!-- Graphic Title -->
+                    <svg>
+                        <filter id="title">
+                            <feTurbulence
+                                id="turbulence"
+                                baseFrequency="0.1 0.1"
+                                numOctaves="2"
+                                seed="3"
+                            >
+                                <animate
+                                    attributeName="baseFrequency"
+                                    dur="10s"
+                                    values="0.1 0.1; 0.12 0.2"
+                                    repeatCount="indefinite"
+                                ></animate>
+                            </feTurbulence>
+                            <feDisplacementMap
+                                in="SourceGraphic"
+                                scale="5"
+                            ></feDisplacementMap>
+                        </filter>
+                    </svg>
+                    <!-- Graphic Title -->
+                </div>
+                <div class="main-play-game-btnn show-btn">
+                    <a href="#introduction">Trải Nghiệm Cuộc Sống Đại Học</a>
+                </div>
+
+                <div class="main-play-game-btn">
+                    <a href="./loadGame.html">Play</a>
+                </div>
+            </section>
+
+            <section id="introduction">
+                <h1>Experiencing College Life</h1>
+                <div class="divici">
+                    <img src="./assets/img/thanhchia.png" alt="" />
+                </div>
+                <div class="introduction-content">
+                    <p>
+                        Experiencing College Life là một tựa game mô phỏng giả
+                        lập về cuộc sống đại học gói gọn trong 3.5 năm, được
+                        tính bằng 42 tháng.
+                    </p>
+                    <p>
+                        Người chơi sẽ hóa thân vào một nhân vật vừa bước chân
+                        vào đại học, đứng trước vô vàn lựa chọn ngành nghề như
+                        vô số cánh cửa ở trước mắt. Cần phải mở nó ra, nhưng lại
+                        sợ đó sẽ trở thành một lựa chọn sai lầm.
+                    </p>
+                    <p>
+                        Ngay lúc ấy, nhân vật gặp được một nàng tiên xinh xắn
+                        gọi là bé Tư, đến từ Thế Giới Thụ, với nhiệm vụ giúp đỡ
+                        những người như vậy lựa chọn được một con đường là họ sẽ
+                        không hối hận.
+                    </p>
+                </div>
+                <div class="introduction-wrapper"></div>
+            </section>
+
+            <section id="character">
+                <h1>Bé Tư</h1>
+                <div class="divici">
+                    <img src="./assets/img/thanhchia.png" alt="" />
+                </div>
+                <div class="character-info">
+                    <div class="character-box">
+                        <p><span>Tên:</span> Bé Tư</p>
+                        <p><span>Tuổi:</span> ???</p>
+                        <p><span>Chiều cao:</span> ???</p>
+                        <p><span>Cân nặng:</span> ???</p>
+                        <p><span>Ba vòng:</span> ???</p>
+                        <p><span>Sở thích:</span> Thích ăn bánh Pudding</p>
+                        <p>
+                            <span>Mô tả:</span> Nàng tiên đến từ Thế Giới Thụ,
+                            với nhiệm vụ giúp đỡ những con người đang phân vân
+                            với lựa chọn của mình. Để họ chọn đúng con đường mà
+                            họ không hối hận trong tương lai và kiên định bước
+                            đi trên con đường đó.
+                        </p>
+                    </div>
+
+                    <div class="character-img">
+                        <img
+                            src="./assets/img/inazuma-commission-spoil-nahida-name-4-1736-removebg-preview.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section id="guide">
+                <h1>Tư Liệu</h1>
+                <div class="divici">
+                    <img src="./assets/img/thanhchia.png" alt="" />
+                </div>
+                <div class="guide-box">
+                    <!-- Item -->
+                    <div class="guide-box-item">
+                        <div class="item-title tab-item active">Cách Chơi?</div>
+                        <div class="item-desc tab-pane show">
+                            - Mỗi tháng bạn sẽ có một điểm hành động, hãy dùng
+                            điểm hành động để tận hưởng các hoạt động có trong
+                            game.
+                        </div>
+                    </div>
+                    <div class="divici">
+                        <img src="./assets/img/thanhchia.png" alt="" />
+                    </div>
+                    <!-- Item -->
+                    <div class="guide-box-item">
+                        <div class="item-title tab-item">
+                            Cách tăng điểm trí tuệ?
+                        </div>
+                        <div class="item-desc tab-pane">
+                            - Dùng điểm hành động để tham gia hoạt động Học
+                            Hành, trả lời đúng câu hỏi sẽ nhận được 2 điểm Trí
+                            Tuệ.
+                        </div>
+                    </div>
+                    <div class="divici">
+                        <img src="./assets/img/thanhchia.png" alt="" />
+                    </div>
+                    <!-- Item -->
+                    <div class="guide-box-item">
+                        <div class="item-title tab-item">
+                            Cách kiếm tiền trong game?
+                        </div>
+                        <div class="item-desc tab-pane">
+                            - Bạn có thể kiếm tiền thông qua Làm Thêm, hoặc tham
+                            gia một số hoạt động đôi khi có cơ hội nhận được
+                            tiền.
+                            <br />
+                            - Ngoài ra, bạn có thể mua sắm các vật phẩm từ shop,
+                            một số vật phẩm có chức năng có thể kiếm tiền.
+                        </div>
+                    </div>
+                    <div class="divici">
+                        <img src="./assets/img/thanhchia.png" alt="" />
+                    </div>
+                    <!-- Item -->
+                    <div class="guide-box-item">
+                        <div class="item-title tab-item">
+                            Cách kiếm bạn gái trong game?
+                        </div>
+                        <div class="item-desc tab-pane">
+                            - Bạn có thể dùng các vật phẩm để tăng điểm thân mật
+                            với các NPC, đến một mức độ nhất định có thể bắt đầu
+                            thiết lập mối quan hệ.
+                        </div>
+                    </div>
+                    <div class="divici">
+                        <img src="./assets/img/thanhchia.png" alt="" />
+                    </div>
+
+                    <!-- Item -->
+                    <div class="guide-box-item">
+                        <div class="item-title tab-item">
+                            Công dụng của điểm thông số?
+                        </div>
+                        <div class="item-desc tab-pane">
+                            - Điểm thông số càng cao thì các event sẽ hiện thị
+                            tương quan với nó. Chẳng hạn như khi bạn có điểm Trí
+                            Tuệ cao thì sẽ có các cơ hội gặp các event tăng điểm
+                            Trí Tuệ. Ngoài ra, điểm thông số còn là thứ để đánh
+                            giá kết quả 42 tháng trải nghiệm cuộc sống đại học.
+                        </div>
+                    </div>
+                    <div class="divici">
+                        <img src="./assets/img/thanhchia.png" alt="" />
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Wrapper End -->
+
+        <!-- Javascript Link -->
+        <section id="script">
+            <script src="./assets/js/bootstrap.bundle.js"></script>
+            <script src="./assets/js/jquery.js"></script>
+            <script src="./assets/js/script.js"></script>
+            <script src="./game/js/main.js"></script>
+        </section>
+    </body>
+</html>
